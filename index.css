@@ -41,25 +41,37 @@ p {
   color: #6b7280;
 }
 
-button {
+button,
+input {
   border-radius: 6px;
   border: none;
   font-family: inter;
   font-size: 16px;
   font-weight: 500;
 }
-
 #generate-btn {
-  width: 223px;
+  margin-right: 17px;
+}
+#generate-btn,
+#reset-btn {
+  width: 211px;
   height: 42px;
   background-color: #10b981;
   color: #ffffff;
   line-height: 24px;
   padding: 9px, 17px, 9px, 15px;
   margin-bottom: 35px;
+  cursor: pointer;
+  transition: background-color, 0.3s;
 }
 
-#generate-btn i {
+#generate-btn:hover,
+#reset-btn:hover {
+  background-color: #059669;
+}
+
+#generate-btn i,
+#reset-btn i {
   margin-right: 15px;
 }
 
@@ -69,19 +81,48 @@ button {
   margin-bottom: 35px;
 }
 
-.btns {
+.passwords {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  position: relative;
 }
 
-.btns button {
+.passwords input {
   width: 211px;
   height: 39px;
   background-color: #273549;
   margin-bottom: 27px;
+  border: none;
+  color: #5def92;
+  text-align: center;
 }
 
-.btns i {
+.passwords i {
+  position: absolute;
   color: #3f516b;
+}
+
+.passwords .show:nth-of-type(1) {
+  top: 10px;
+  left: 100px;
+}
+
+.passwords .show:nth-of-type(2) {
+  top: 10px;
+  right: 100px;
+}
+
+.passwords .show:nth-of-type(3) {
+  top: 75px;
+  left: 100px;
+}
+
+.passwords .show:nth-of-type(4) {
+  top: 75px;
+  right: 100px;
+}
+
+.hidden {
+  display: none;
 }
