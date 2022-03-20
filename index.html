@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/8ce185b8eb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&family=Karla:wght@800&display=swap" rel="stylesheet">
-    <script src="index.js"></script> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&family=Karla:wght@800&display=swap" rel="stylesheet">
+    <script src="index.js" defer></script> 
     <title>Password Generator</title>
 </head>
 <body>
@@ -19,15 +19,18 @@
         </header>
 
         <section>
-            <button id="generate-btn"><i class="fas fa-bolt"></i>Generate passwords</button>
+            <button id="generate-btn" onclick="randomPassword()"><i class="fas fa-bolt"></i>Generate passwords</button>
+            <button id="reset-btn" onclick="resetPassword()"><i class="fas fa-retweet"></i>Reset</button>
             <div class="borderline"></div>
         </section>
 
-        <section class="btns">
-            <button id="password-1"><i class="fas fa-ellipsis-h"></i></button>
-            <button id="password-2"><i class="fas fa-ellipsis-h"></i></button>
-            <button id="password-3"><i class="fas fa-ellipsis-h"></i></button>
-            <button id="password-4"><i class="fas fa-ellipsis-h"></i></button>
+        <section class="passwords">
+            <input type="text" id="password-1" readonly=""></input><i class="fas fa-ellipsis-h show"></i>
+            <input type="text" id="password-2" readonly=""></input><i class="fas fa-ellipsis-h show"></i>
+            <input type="text" id="password-3" readonly=""></input><i class="fas fa-ellipsis-h show"></i>
+            <input type="text" id="password-4" readonly=""></input><i class="fas fa-ellipsis-h show"></i>
+         
+            
         </section>
     </div>
     
